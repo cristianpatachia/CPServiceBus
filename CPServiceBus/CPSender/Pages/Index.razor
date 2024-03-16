@@ -50,21 +50,22 @@
 
 
 @code {
-    protected bool isDebug = false;
     protected Payment payment = new Payment();
-    protected Payment? debug_payment = null;
     protected ValidationResult validationResult = new ValidationResult();
+
+    protected bool isDebug = false;
+    protected Payment? debug_payment = null;
 
     private async Task PublishMessage()
     {
-        var paymentValidator = new PaymentValidator();
-        validationResult = paymentValidator.Validate(payment);
-
         if (isDebug)
         {
             debug_payment = payment;
         }
-        else
+
+        var paymentValidator = new PaymentValidator();
+        validationResult = paymentValidator.Validate(payment);
+        if (validationResult.IsValid)
         {
             await queueService.PublishPaymentMesssage(payment);
         }
