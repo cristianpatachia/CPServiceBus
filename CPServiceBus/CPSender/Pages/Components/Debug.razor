@@ -1,0 +1,24 @@
+@using CPShared.Models
+
+@if (IsDebug && DebugPayment is not null)
+{
+    <br />
+    <br />
+
+    <div>
+        <p>Debug Info:</p>
+        <p>From: @DebugPayment.From</p>
+        <p>To: @DebugPayment.To</p>
+        <p>Amount: @DebugPayment.Amount</p>
+        <p>Id: @DebugPayment.Id</p>
+        <p>TimeStamp: @DebugPayment.DateTimeUtc</p>
+    </div>
+}
+
+@code {
+    [Parameter]
+    public bool IsDebug { get; set; }
+
+    [Parameter]
+    public Payment? DebugPayment { get; set; }
+}

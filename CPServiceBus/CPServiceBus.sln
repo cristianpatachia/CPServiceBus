@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPSender", "CPSender\CPSender.csproj", "{45DCA64B-DA9C-4EAF-8DAD-50773C322B0D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPShared", "CPShared\CPShared.csproj", "{8A4FFF94-3800-4281-98C1-B343DE9207C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPReceiver", "CPReceiver\CPReceiver.csproj", "{56FD124C-2436-45E1-B89A-7B8B46659820}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45DCA64B-DA9C-4EAF-8DAD-50773C322B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45DCA64B-DA9C-4EAF-8DAD-50773C322B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45DCA64B-DA9C-4EAF-8DAD-50773C322B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45DCA64B-DA9C-4EAF-8DAD-50773C322B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A4FFF94-3800-4281-98C1-B343DE9207C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A4FFF94-3800-4281-98C1-B343DE9207C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A4FFF94-3800-4281-98C1-B343DE9207C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A4FFF94-3800-4281-98C1-B343DE9207C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FD124C-2436-45E1-B89A-7B8B46659820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FD124C-2436-45E1-B89A-7B8B46659820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FD124C-2436-45E1-B89A-7B8B46659820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FD124C-2436-45E1-B89A-7B8B46659820}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C784CE78-E064-4711-A8F4-915BE1056852}
+	EndGlobalSection
+EndGlobal

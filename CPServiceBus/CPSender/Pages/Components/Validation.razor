@@ -1,0 +1,17 @@
+@using FluentValidation.Results
+
+@if (ValidationResult is not null && ValidationResult.Errors.Any())
+{
+    <div>
+        <p>The following validation error(s) occurred:</p>
+        @foreach (string errorMessage in ValidationResult.Errors.Select(x => x.ErrorMessage))
+        {
+            <p>@errorMessage</p>
+        }
+    </div>
+}
+
+@code{
+    [Parameter]
+    public ValidationResult ValidationResult { get; set; }
+}

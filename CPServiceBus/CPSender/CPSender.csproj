@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UserSecretsId>4407a061-7da7-47af-bbe1-9a7620743924</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Azure.Messaging.ServiceBus" Version="7.17.3" />
+		<PackageReference Include="FluentValidation" Version="11.9.0" />
+		<PackageReference Include="Microsoft.Azure.ServiceBus" Version="5.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\CPShared\CPShared.csproj" />
+	</ItemGroup>
+
+</Project>

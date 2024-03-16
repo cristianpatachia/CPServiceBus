@@ -1,0 +1,84 @@
+﻿@using CPSender.Pages.Components
+@using CPShared.Models
+@using CPSender.Services.Interfaces
+@using CPShared.Constants
+@using CPShared.Validators
+@using CPShared.Extensions
+@using FluentValidation.Results
+
+@inject IQueueService queueService
+
+@page "/"
+
+<PageTitle>Index</PageTitle>
+
+<h1>Payment Sender</h1>
+
+<EditForm Model=@payment OnValidSubmit="@PublishMessage">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="containerWidth">
+        <div class="form-group">
+            <label for="from">From:</label>
+            <InputText id="from" class="form-control" @bind-Value="payment.From" />
+        </div>
+
+        <div class="form-group">
+            <label for="to">To:</label>
+            <InputText id="to" class="form-control" @bind-Value="payment.To" />
+        </div>
+
+        <div class="form-group">
+            <label for="amount">Amount:</label>
+            <InputNumber id="amount" class="form-control" @bind-Value="payment.Amount" />
+        </div>
+
+        <br />
+
+        <button type="submit" class="btn btn-primary">Send Payment</button>
+    </div>
+</EditForm>
+
+<div class="containerWidth font-red">
+    <Validation ValidationResult=@validationResult />
+</div>
+
+<div>
+    <Debug IsDebug=@isDebug
+           DebugPayment=@debug_payment />
+</div>
+
+
+@code {
+    protected bool isDebug = false;
+    protected Payment payment = new Payment();
+    protected Payment? debug_payment = null;
+    protected ValidationResult validationResult = new ValidationResult();
+
+    private async Task PublishMessage()
+    {
+        var paymentValidator = new PaymentValidator();
+        validationResult = paymentValidator.Validate(payment);
+
+        if (isDebug)
+        {
+            debug_payment = payment;
+        }
+        else
+        {
+            await queueService.PublishPaymentMesssage(payment);
+        }
+
+        payment = new Payment();
+    }
+}
+
+<style>
+    .containerWidth {
+        width: 40%;
+    }
+
+    .font-red {
+        color: #ff0000;
+    }
+</style>

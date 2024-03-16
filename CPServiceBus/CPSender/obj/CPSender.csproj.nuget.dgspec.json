@@ -1,0 +1,151 @@
+{
+  "format": 1,
+  "restore": {
+    "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPSender\\CPSender.csproj": {}
+  },
+  "projects": {
+    "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPSender\\CPSender.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPSender\\CPSender.csproj",
+        "projectName": "CPSender",
+        "projectPath": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPSender\\CPSender.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPSender\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPShared\\CPShared.csproj": {
+                "projectPath": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPShared\\CPShared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Azure.Messaging.ServiceBus": {
+              "target": "Package",
+              "version": "[7.17.3, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.Azure.ServiceBus": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPShared\\CPShared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPShared\\CPShared.csproj",
+        "projectName": "CPShared",
+        "projectPath": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPShared\\CPShared.csproj",
+        "packagesPath": "C:\\Users\\crist\\.nuget\\packages\\",
+        "outputPath": "X:\\Dev\\C#.NET\\CPServiceBus\\CPServiceBus\\CPShared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\crist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.9.0, )"
+            },
+            "Microsoft.Azure.ServiceBus": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
